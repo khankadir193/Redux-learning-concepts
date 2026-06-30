@@ -1,0 +1,27 @@
+complete structure of the redux conunter
+
+User Clicks Increment
+        │
+        ▼
+dispatch(increment())
+        │
+        ▼
+Redux Action Created
+        │
+        ▼
+Reducer Executes
+        │
+        ▼
+state.value += 1
+        │
+        ▼
+Store Updated
+        │
+        ▼
+useSelector Gets New Value
+        │
+        ▼
+Component Re-renders
+        │
+        ▼
+Updated Count Shown

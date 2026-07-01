@@ -4,13 +4,15 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 import CounterComponent from './Feature/ReduxCounter/counter/CounterExample'
+import TodoExample from './Feature/ReduxTodo/todo/TodoComponent'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <CounterComponent />
+    {/* <CounterComponent /> */}
+    <TodoExample />
     </>
   )
 };

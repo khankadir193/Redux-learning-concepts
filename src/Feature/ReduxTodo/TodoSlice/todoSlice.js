@@ -7,13 +7,16 @@ const todoSlice = createSlice({
     },
     reducers: {
         addItem: (state, action) => {
-            console.log('state..',state.todos,'\n','action...',action);
+            console.log('state..', state.todos, '\n', 'action...', action);
 
             state.todos.push({
                 id: Date.now(),
                 text: action.payload,
                 completed: false
             })
+        },
+        deleteItem: () => {
+            
         }
     }
 });

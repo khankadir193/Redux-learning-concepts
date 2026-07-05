@@ -1,0 +1,54 @@
+.todo-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.todo-subcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    width: 100%;
+    background-color: rgb(139, 144, 69);
+    border: 3px solid purple;
+    border-radius: 3vw;
+}
+
+.todo-subcontainer input{
+    width: 70%;
+    padding: .5rem 0;
+    border: 2px dotted blue;
+    border-radius: 3rem;
+} 
+
+.todo-container button{
+    border: none;
+    padding: .5vw 1.5vw;
+    border-radius: 3vw;
+    background-color: antiquewhite;
+}
+
+.todo-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: 1vw;
+    margin: 1vw;
+}
+
+.todo-item span button{
+    background-color: blue;
+    color: red;
+}
+
+.todo-item button{
+    border: none;
+    outline: none;
+    background: wheat;
+}

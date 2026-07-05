@@ -15,10 +15,16 @@ const todoSlice = createSlice({
                 completed: false
             })
         },
-        deleteItem: () => {
-            
+        deleteItem: (state,action) => {
+            console.log('id.....for delete item for redux',action);
+            const newItem = [...state.todos];
+            console.log('newItem...',newItem);
+            // const result = newItem.filter((item)=>(
+            //     item.id !== id
+            // ));
+            // console.log('delete filter redux....',result);
         }
     }
 });
-export const { addItem } = todoSlice.actions;
+export const { addItem,deleteItem } = todoSlice.actions;
 export default todoSlice.reducer;

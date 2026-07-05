@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { addItem } from '../TodoSlice/todoSlice';
+import { addItem, deleteItem } from '../TodoSlice/todoSlice';
 import { useState } from "react";
 import './todoStyles.css'
 const TodoExample = () => {
@@ -14,6 +14,12 @@ const TodoExample = () => {
         setValue('');
     }
 
+    const handleDelete = (id) => {
+        console.log('handle delete....',id)
+        dispatch(deleteItem(id))
+
+    }
+
     return (
         <div className="todo-container">
             <div className="todo-subcontainer">
@@ -24,9 +30,9 @@ const TodoExample = () => {
             {
                 todoValue.map((item) => {
                     return (
-                        <div className="todo-item">
+                        <div className="todo-item" key={item.id}>
                             <span>{item.text}</span>
-                            <button>Delete</button>
+                            <button onClick={()=>handleDelete(item.id)}>Delete</button>
                         </div>
                     )
                 })

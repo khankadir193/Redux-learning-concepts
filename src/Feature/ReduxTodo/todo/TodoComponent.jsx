@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { addItem, deleteItem } from '../TodoSlice/todoSlice';
+import { addItem, deleteItem, toggleTodo } from '../TodoSlice/todoSlice';
 import { useState } from "react";
 import './todoStyles.css'
 const TodoExample = () => {
@@ -15,10 +15,15 @@ const TodoExample = () => {
     }
 
     const handleDelete = (id) => {
-        console.log('handle delete....',id)
+        // console.log('handle delete....',id)
         dispatch(deleteItem(id))
 
+    };
+
+    const handleCheckbox = (id)=>{
+        dispatch(toggleTodo(id));
     }
+
 
     return (
         <div className="todo-container">
@@ -31,6 +36,7 @@ const TodoExample = () => {
                 todoValue.map((item) => {
                     return (
                         <div className="todo-item" key={item.id}>
+                            <input type="checkbox" checked={item.completed} onChange={()=>handleCheckbox(item.id)} />
                             <span>{item.text}</span>
                             <button onClick={()=>handleDelete(item.id)}>Delete</button>
                         </div>

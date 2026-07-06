@@ -7,7 +7,7 @@ const todoSlice = createSlice({
     },
     reducers: {
         addItem: (state, action) => {
-            console.log('state..', state.todos, '\n', 'action...', action);
+            // console.log('state..', state.todos, '\n', 'action...', action);
 
             state.todos.push({
                 id: Date.now(),
@@ -23,17 +23,10 @@ const todoSlice = createSlice({
             //     item.id !== id
             // ));
             // console.log('delete filter redux....',result);
-
-            // console.log("Before:", [...state.todos]);
-
             const id = action.payload;
-
             state.todos = state.todos.filter(
                 item => item.id !== id
             );
-
-            // console.log("After:", [...state.todos]);
-
         }
     }
 });

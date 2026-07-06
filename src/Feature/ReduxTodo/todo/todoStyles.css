@@ -47,6 +47,10 @@
     color: red;
 }
 
+/* input[type='text']{
+    border: purple;
+} */
+
 .todo-item button{
     border: none;
     outline: none;

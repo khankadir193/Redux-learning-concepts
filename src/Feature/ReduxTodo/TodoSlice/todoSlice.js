@@ -28,19 +28,31 @@ const todoSlice = createSlice({
                 item => item.id !== id
             );
         },
-        toggleTodo:(state,action)=>{
+        toggleTodo: (state, action) => {
             // console.log('action...toggletodo..',action);
             const id = action.payload;
-            state.todos = state.todos.map((item)=>{
-                if(item.id === id){
-                    item.completed = !item.completed;
-                    return item;
-                }else{
-                    return item;
-                }
-            })
+            state.todos = state.todos.map((item) => (
+                // if(item.id === id){
+                //     item.completed = !item.completed;
+                //     return item;
+                // }else{
+                //     return item;
+                // }
+                item.id === id ? { ...item, completed: !item.completed } : item
+            ))
+        },
+        editTodo: (state, action) => {
+            // console.log('action...', action);
+            const textValue = action.payload.text;
+            const id = action.payload.id;
+
+            state.todos = state.todos.map((item) => (
+                item.id === id ? { ...item, text: textValue }
+                    : item
+            ))
+
         }
     }
 });
-export const { addItem, deleteItem ,toggleTodo} = todoSlice.actions;
+export const { addItem, deleteItem, toggleTodo, editTodo } = todoSlice.actions;
 export default todoSlice.reducer;

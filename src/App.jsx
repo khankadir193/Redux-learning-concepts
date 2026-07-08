@@ -5,6 +5,7 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import CounterComponent from './Feature/ReduxCounter/counter/CounterExample'
 import TodoExample from './Feature/ReduxTodo/todo/TodoComponent'
+import ToggleComponent from './Feature/ThemeToggle/Toggle/ToggleComponent'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,7 +13,8 @@ function App() {
   return (
     <>
     {/* <CounterComponent /> */}
-    <TodoExample />
+    {/* <TodoExample /> */}
+    <ToggleComponent /> 
     </>
   )
 };

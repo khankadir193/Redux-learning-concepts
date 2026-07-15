@@ -1,0 +1,43 @@
+.form-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 15px 0;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='number']{
+    width: 40%;
+    border-radius: 7px;
+    border: 3px solid purple;
+    padding: 5px 3px;
+}
+
+.btn-container{
+    display: flex;
+    gap: 50px;
+}
+
+.btn-container button{
+    background-color: #4A5568;
+    color: #ffffff;
+    padding: 5px 10px;
+}
+
+.text-content{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: antiquewhite;
+    color: navy;
+    border: 4px dotted #4A5568;
+}
+.text-content span{
+    padding: 10px 15px;
+}
